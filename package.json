@@ -1,0 +1,28 @@
+{
+  "name": "express-starter-kit",
+  "version": "0.0.0",
+  "private": true,
+  "url": "https://github.com/DrCoc/express-kit-starter",
+  "author": "DrCoc",
+  "scripts": {
+    "start": "killall node; npm run watch-scss & npm run watch-code",
+    "watch-code": "nodemon app.js",
+    "watch-scss": "nodemon -e scss -x \"npm run build-css\"",
+    "build-css": "node-sass --include-path scss views/stylesheets/main.scss public/css/style.css",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1",
+    "nodemon": "^1.18.3",
+    "node-sass": "^4.9.2",
+    "supertest": "^3.0.0"
+  }
+}
